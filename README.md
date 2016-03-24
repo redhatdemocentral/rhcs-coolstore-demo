@@ -30,7 +30,7 @@ Install on Red Hat CDK OpenShift Enterprise image
     [http://rhcs-coolstore-demo.10.1.2.2.xip.io/business-central](http://rhcs-coolstore-demo.10.1.2.2.xip.io/business-central)
     ( u:erics / p:jbossbrms1! )
 
-    [http://rhcs-coolstore-demo.10.1.2.2.xip.io/rhcs-coolstore-demo](http://rhcs-coolstore-demo.10.1.2.2.xip.io/rhcs-coolstore-demo)
+    [http://rhcs-coolstore-demo.10.1.2.2.xip.io/brms-coolstore-demo](http://rhcs-coolstore-demo.10.1.2.2.xip.io/brms-coolstore-demo)
 
 
 Please note before running demo:
