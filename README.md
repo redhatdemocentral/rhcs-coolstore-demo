@@ -33,8 +33,8 @@ Install on Red Hat CDK OpenShift Enterprise image
     [http://rhcs-coolstore-demo.10.1.2.2.xip.io/brms-coolstore-demo](http://rhcs-coolstore-demo.10.1.2.2.xip.io/brms-coolstore-demo)
 
 
-Please note before running demo:
---------------------------------
+Note before running demo:
+-------------------------
 The web application (shopping cart) is built during demo installation with a provided coolstore project jar version 2.0.0. When you 
 open the project you will find the version is also set to 2.0.0. You can run the web application as is, but if you build and deploy
 a new version of 2.0.0 to your maven repository it will find duplicate rules. To demo you deploy a new version of the coolstore
@@ -68,7 +68,7 @@ This is a good way to look at what is being created during the installation:
 
 Supporting Articles
 -------------------
-coming soon...
+- [Ultimate Cloud Guide to Retail in the Cloud with JBoss Cool Store](http://www.schabell.org/2016/03/ultimate-cloud-guide-retail-cloud-jboss-coolstore.html)
 
 
 Released versions
