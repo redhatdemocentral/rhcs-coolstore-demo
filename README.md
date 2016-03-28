@@ -83,13 +83,5 @@ See the tagged releases for the following versions of the product:
 
 ![JBoss BRMS](https://github.com/eschabell/rhcs-coolstore-demo/blob/master/docs/demo-images/jboss-brms.png?raw=true)
 
-[![Video bpmPaaS CoolStore](https://github.com/eschabell/rhcs-coolstore-demo/blob/master/docs/demo-images/video-rhcs-coolstore-demo.png?raw=true)](https://vimeo.com/ericschabell/rhcs-coolstore-demo)
-
-[![Video bpmPaaS CoolStore](https://github.com/eschabell/rhcs-coolstore-demo/blob/master/docs/demo-images/video-bpmpaas-coolstore.png?raw=true)](http://vimeo.com/ericschabell/bpmpaas-rhcs-coolstore-demo)
-
 ![Decision Table](https://github.com/eschabell/rhcs-coolstore-demo/blob/master/docs/demo-images/coolstore-decision-table.png?raw=true)
-
-![Domain Model](https://github.com/eschabell/rhcs-coolstore-demo/blob/master/docs/demo-images/coolstore-model.png?raw=true)
-
-
 
