@@ -52,6 +52,11 @@ if not "%ERRORLEVEL%" == "0" (
 )
 
 echo.
+echo Creating a new project...
+echo.
+call oc new-project rhcs-coolstore-demo 
+
+echo.
 echo Setting up a new build...
 echo.
 call oc new-build "jbossdemocentral/developer" --name=rhcs-coolstore-demo --binary=true
