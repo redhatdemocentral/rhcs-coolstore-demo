@@ -4,5 +4,4 @@ target/
 RemoteSystemsTempFiles/
 .index/
 *.zip
-*.jar
 repository/
