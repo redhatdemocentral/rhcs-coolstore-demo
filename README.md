@@ -15,11 +15,11 @@ into an external maven repository (not your local repository), in /tmp/maven-rep
 
 Install on Red Hat CDK OpenShift Enterprise image
 -------------------------------------------------
-1. First complete the installation and start the OpenShift image supplied in the [cdk-install-demo](https://github.com/eschabell/cdk-install-demo).
+1. First complete the installation and start the OpenShift image supplied in the [cdk-install-demo](https://github.com/redhatdemocentral/cdk-install-demo).
 
 2. Install [OpenShift Client Tools](https://developers.openshift.com/managing-your-applications/client-tools.html) if you have not done so previously.
 
-3. [Download and unzip this demo.](https://github.com/eschabell/rhcs-coolstore-demo/archive/master.zip)
+3. [Download and unzip this demo.](https://github.com/redhatdemocentral/rhcs-coolstore-demo/archive/master.zip)
 
 4. Add products to installs directory.
 
@@ -59,7 +59,7 @@ This is a good way to look at what is being created during the installation:
     rhcs-coolstore-demo-1       Docker                                         Binary@56ed14a   Running    2 minutes ago   2m11s
     
     NAME                        DOCKER REPO                                    TAGS                  UPDATED
-    developer                   eschabell/developer                     1.0,jdk8-uid,latest   10 minutes ago
+    developer                   redhatdemocentral/developer                     1.0,jdk8-uid,latest   10 minutes ago
     rhcs-coolstore-demo         172.30.211.34:5000/rhcs-coolstore-demo/rhcs-coolstore-demo
 
     NAME                             READY                                     STATUS     RESTARTS   AGE
@@ -77,11 +77,11 @@ See the tagged releases for the following versions of the product:
 
 - v1.0 - JBoss BRMS 6.2.0-BZ-1299002, JBoss EAP 6.4.4 with Cool Store installed on Red Hat CDK using OpenShift Enterprise image. 
 
-![OSE pod](https://github.com/eschabell/rhcs-coolstore-demo/blob/master/docs/demo-images/rhcs-coolstore-pod.png?raw=true)
+![OSE pod](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/rhcs-coolstore-pod.png?raw=true)
 
-![OSE build](https://github.com/eschabell/rhcs-coolstore-demo/blob/master/docs/demo-images/rhcs-coolstore-build.png?raw=true)
+![OSE build](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/rhcs-coolstore-build.png?raw=true)
 
-![JBoss BRMS](https://github.com/eschabell/rhcs-coolstore-demo/blob/master/docs/demo-images/jboss-brms.png?raw=true)
+![JBoss BRMS](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/jboss-brms.png?raw=true)
 
-![Decision Table](https://github.com/eschabell/rhcs-coolstore-demo/blob/master/docs/demo-images/coolstore-decision-table.png?raw=true)
+![Decision Table](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/coolstore-decision-table.png?raw=true)
 

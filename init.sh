@@ -1,30 +1,30 @@
 #!/bin/sh 
 DEMO="Cloud JBoss Cool Store Demo"
 AUTHORS="Andrew Block, Eric D. Schabell"
-PROJECT="git@github.com:eschabell/rhcs-coolstore-demo.git"
+PROJECT="git@github.com:redhatdemocentral/rhcs-coolstore-demo.git"
 
 # wipe screen.
 clear 
 
 echo
-echo "#############################################################"
-echo "##                                                         ##"   
-echo "##  Setting up the ${DEMO}             ##"
-echo "##                                                         ##"   
-echo "##                                                         ##"   
-echo "##   ####  ###   ###  #      #### #####  ###   ###  #####  ##"
-echo "##  #     #   # #   # #     #       #   #   # #   # #      ##"
-echo "##  #     #   # #   # #      ###    #   #   # ####  ###    ##"
-echo "##  #     #   # #   # #         #   #   #   # #  #  #      ##"
-echo "##   ####  ###   ###  ##### ####    #    ###  #   # #####  ##"
-echo "##                                                         ##"   
-echo "##                                                         ##"   
-echo "##  brought to you by,                                     ##"   
-echo "##             ${AUTHORS}              ##"
-echo "##                                                         ##"   
+echo "#####################################################################"
+echo "##                                                                 ##"   
+echo "##  Setting up the ${DEMO}                     ##"
+echo "##                                                                 ##"   
+echo "##                                                                 ##"   
+echo "##   ####  ###   ###  #      #### #####  ###   ###  #####          ##"
+echo "##  #     #   # #   # #     #       #   #   # #   # #              ##"
+echo "##  #     #   # #   # #      ###    #   #   # ####  ###            ##"
+echo "##  #     #   # #   # #         #   #   #   # #  #  #              ##"
+echo "##   ####  ###   ###  ##### ####    #    ###  #   # #####          ##"
+echo "##                                                                 ##"   
+echo "##                                                                 ##"   
+echo "##  brought to you by,                                             ##"   
+echo "##             ${AUTHORS}                      ##"
+echo "##                                                                 ##"   
 echo "##  ${PROJECT}       ##"
-echo "##                                                         ##"   
-echo "#############################################################"
+echo "##                                                                 ##"   
+echo "#####################################################################"
 echo
 
 # make some checks first before proceeding.	

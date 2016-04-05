@@ -4,30 +4,30 @@ setlocal
 set PROJECT_HOME=%~dp0
 set DEMO=Cloud JBoss Cool Store Demo
 set AUTHORS=Andrew Block, Eric D. Schabell
-set PROJECT=git@github.com:eschabell/rhcs-coolstore-demo.git
+set PROJECT=git@github.com:redhatdemocentral/rhcs-coolstore-demo.git
 
 REM wipe screen.
 cls
 
 echo.
-echo #############################################################
-echo ##                                                         ##   
-echo ##  Setting up the %DEMO%              ##
-echo ##                                                         ##   
-echo ##                                                         ##   
-echo ##   ####  ###   ###  #      #### #####  ###   ###  #####  ##
-echo ##  #     #   # #   # #     #       #   #   # #   # #      ##
-echo ##  #     #   # #   # #      ###    #   #   # ####  ###    ##
-echo ##  #     #   # #   # #         #   #   #   # #  #  #      ##
-echo ##   ####  ###   ###  ##### ####    #    ###  #   # #####  ##
-echo ##                                                         ##   
-echo ##                                                         ##   
-echo ##  brought to you by,                                     ##   
-echo ##             %AUTHORS%               ##
-echo ##                                                         ##   
+echo #####################################################################
+echo ##                                                                 ##   
+echo ##  Setting up the %DEMO%                      ##
+echo ##                                                                 ##   
+echo ##                                                                 ##   
+echo ##   ####  ###   ###  #      #### #####  ###   ###  #####          ##
+echo ##  #     #   # #   # #     #       #   #   # #   # #              ##
+echo ##  #     #   # #   # #      ###    #   #   # ####  ###            ##
+echo ##  #     #   # #   # #         #   #   #   # #  #  #              ##
+echo ##   ####  ###   ###  ##### ####    #    ###  #   # #####          ##
+echo ##                                                                 ##   
+echo ##                                                                 ##   
+echo ##  brought to you by,                                             ##   
+echo ##             %AUTHORS%                       ##
+echo ##                                                                 ##   
 echo ##  %PROJECT%        ##
-echo ##                                                         ##   
-echo #############################################################
+echo ##                                                                 ##   
+echo #####################################################################
 echo.
 
 REM make some checks first before proceeding.	
