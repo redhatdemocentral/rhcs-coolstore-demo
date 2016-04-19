@@ -43,7 +43,7 @@ REM make some checks first before proceeding.
 call where oc >nul 2>&1
 if  %ERRORLEVEL% NEQ 0 (
 	echo OpenShift command line tooling is required but not installed yet... download here:
-	echo https://developers.openshift.com/managing-your-applications/client-tools.html
+	echo https://access.redhat.com/downloads/content/290
 	GOTO :EOF
 )
 
