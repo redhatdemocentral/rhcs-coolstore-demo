@@ -1,0 +1,11 @@
+id: rhcs-coolstore
+title: Cloud JBoss Cool Store Demo
+github_repo_url: https://github.com/redhatdemocentral/rhcs-coolstore-demo
+technologies:
+  - Red Hat CDK
+  - JBoss BRMS
+  - OpenShift Enterprise  
+summary: Project to automate the installation of JBoss BRMS Cool Store using the Red Hat Container Development Kit (CDK) for application development activities on OpenShift.
+level: Beginner
+product: rhcs
+author: Andrew Block, Eric D. Schabell
