@@ -6,7 +6,9 @@ set DEMO=Cloud JBoss Cool Store Demo
 set AUTHORS=Andrew Block, Eric D. Schabell
 set PROJECT=git@github.com:redhatdemocentral/rhcs-coolstore-demo.git
 set SRC_DIR=%PROJECT_HOME%installs
-set BRMS=jboss-brms-installer-6.2.0.BZ-1299002.jar
+set OPENSHIFT_USER=openshift-dev
+set OPENSHIFT_PWD=devel
+set BRMS=jboss-brms-installer-6.2.0.GA-redhat-1-bz-1334704.jar
 set EAP=jboss-eap-6.4.0-installer.jar
 set EAP_PATCH=jboss-eap-6.4.4-patch.zip
 
@@ -78,9 +80,9 @@ if exist %SRC_DIR%\%BRMS% (
 
 echo OpenShift commandline tooling is installed...
 echo.
-echo Loging into OSE...
+echo Logging in to OpenShift as %OPENSHIFT_USER%...
 echo.
-call oc login 10.1.2.2:8443 --password=admin --username=admin
+call oc login 10.1.2.2:8443 --password="%OPENSHIFT_PWD%" --username="%OPENSHIFT_USER%"
 
 if not "%ERRORLEVEL%" == "0" (
   echo.
