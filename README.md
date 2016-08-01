@@ -74,6 +74,8 @@ See the tagged releases for the following versions of the product:
 
 ![OSE build](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/rhcs-coolstore-build.png?raw=true)
 
+![JBoss Store](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/coolstore-shoppingcart-0.png?raw=true)
+
 ![JBoss BRMS](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/jboss-brms.png?raw=true)
 
 ![Decision Table](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/coolstore-decision-table.png?raw=true)
