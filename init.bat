@@ -8,9 +8,9 @@ set PROJECT=git@github.com:redhatdemocentral/rhcs-coolstore-demo.git
 set SRC_DIR=%PROJECT_HOME%installs
 set OPENSHIFT_USER=openshift-dev
 set OPENSHIFT_PWD=devel
-set BRMS=jboss-brms-installer-6.2.0.GA-redhat-1-bz-1334704.jar
+set BRMS=jboss-brms-6.3.0.GA-installer.jar
 set EAP=jboss-eap-6.4.0-installer.jar
-set EAP_PATCH=jboss-eap-6.4.4-patch.zip
+set EAP_PATCH=jboss-eap-6.4.7-patch.zip
 
 REM wipe screen.
 cls
@@ -108,6 +108,9 @@ if not "%ERRORLEVEL%" == "0" (
 	GOTO :EOF
 )
 
+REM need to wait a bit for new build to finish with developer image.
+timeout 3 /nobreak
+
 echo.
 echo Importing developer image...
 echo.
@@ -123,7 +126,7 @@ if not "%ERRORLEVEL%" == "0" (
 echo.
 echo Starting a build, this takes some time to upload all of the product sources for build...
 echo.
-call oc start-build rhcs-coolstore-demo --from-dir=. --follow=true
+call oc start-build rhcs-coolstore-demo --from-dir=. --follow=true --wait=true
 
 if not "%ERRORLEVEL%" == "0" (
   echo.
