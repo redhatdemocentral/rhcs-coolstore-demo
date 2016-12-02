@@ -3,6 +3,7 @@ DEMO="Cloud JBoss Cool Store Demo"
 AUTHORS="Andrew Block, Eric D. Schabell"
 PROJECT="git@github.com:redhatdemocentral/rhcs-coolstore-demo.git"
 SRC_DIR=./installs
+SUPPORT_DIR=./support
 OPENSHIFT_USER=openshift-dev
 OPENSHIFT_PWD=devel
 HOST_IP=10.1.2.2
@@ -100,6 +101,16 @@ else
 	exit
 fi
 
+# determine the container build file to use.
+if [ $HOST_IP == "10.1.2.2" ]; then
+	echo "Setting container build to target Red Hat CDK..."
+	echo
+	cp -f $SUPPORT_DIR/Dockerfile-CDK ./Dockerfile
+else
+	echo "Setting container build to target Red Hat OCP..."
+	echo
+	cp -f $SUPPORT_DIR/Dockerfile-OCP ./Dockerfile
+fi
 
 # make some checks first before proceeding.	
 command -v oc -v >/dev/null 2>&1 || { echo >&2 "OpenShift command line tooling is required but not installed yet... download here: https://access.redhat.com/downloads/content/290"; exit 1; }

@@ -6,6 +6,7 @@ set DEMO=Cloud JBoss Cool Store Demo
 set AUTHORS=Andrew Block, Eric D. Schabell
 set PROJECT=git@github.com:redhatdemocentral/rhcs-coolstore-demo.git
 set SRC_DIR=%PROJECT_HOME%installs
+set SUPPORT_DIR=%PROJECT_HOME%support
 set OPENSHIFT_USER=openshift-dev
 set OPENSHIFT_PWD=devel
 set HOST_IP=10.1.2.2
@@ -52,14 +53,14 @@ if %argTotal% EQU 1 (
     call :validateIP %1 valid_ip
 
 	if !valid_ip! EQU 0 (
-	    echo OpenShift host given is a valid IP...
-	    set HOST_IP=%1
+	  echo OpenShift host given is a valid IP...
+	  set HOST_IP=%1
 		echo.
 		echo Proceeding with OpenShift host: !HOST_IP!...
 	) else (
 		echo Please provide a valid IP that points to an OpenShift installation...
 		echo.
-        GOTO :printDocs
+    GOTO :printDocs
 	)
 
 )
@@ -67,6 +68,17 @@ if %argTotal% EQU 1 (
 if %argTotal% GTR 1 (
     GOTO :printDocs
 )
+
+REM determine the container build file to use.
+if %HOST_IP% EQU "10.1.2.2" (
+  echo Setting container build to target Red Hat CDK...
+	echo
+	xcopy /Y /Q "%SUPPORT_DIR%\Dockerfile-CDK" "%PROJECT_HOME%Dockerfile"
+) else (
+  echo Setting container build to target Red Hat OCP...
+	echo
+	xcopy /Y /Q "%SUPPORT_DIR%\Dockerfile-OCP" "%PROJECT_HOME%Dockerfile"
+) 
 
 REM make some checks first before proceeding.	
 call where oc >nul 2>&1
