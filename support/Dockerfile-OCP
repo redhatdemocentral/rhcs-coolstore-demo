@@ -54,10 +54,8 @@ RUN mvn install:install-file -Dfile=/opt/jboss/brms-projects/libs/coolstore-2.0.
   && /opt/jboss/fix-permissions /etc/group \
   && /opt/jboss/fix-permissions /opt/jboss/start.sh \
   && /opt/jboss/fix-permissions /opt/jboss/.m2 \
-  #&& rm -rf ~/.m2/repository /opt/jboss/brms-projects \
   && rm -rf /opt/jboss/brms-projects \
   && chmod +x /opt/jboss/start.sh 
-  #&& mkdir -p /opt/jboss/.m2/repository 
 
 # Run as JBoss 
 USER 1000
