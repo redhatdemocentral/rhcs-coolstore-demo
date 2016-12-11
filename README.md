@@ -88,6 +88,8 @@ Released versions
 -----------------
 See the tagged releases for the following versions of the product:
 
+- v1.4 - JBoss BRMS 6.4.0 and JBoss EAP 7.0.0 with Cool Store installed on any given OpenShift installation.
+
 - v1.3 - JBoss BRMS 6.3.0 and JBoss EAP 6.4.7 with Cool Store installed on any given OpenShift installation.
 
 - v1.2 - JBoss BRMS 6.3.0 and JBoss EAP 6.4.7 with Cool Store installed on Red Hat CDK.

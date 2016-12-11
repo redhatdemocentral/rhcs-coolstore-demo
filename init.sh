@@ -7,9 +7,8 @@ SUPPORT_DIR=./support
 OPENSHIFT_USER=openshift-dev
 OPENSHIFT_PWD=devel
 HOST_IP=10.1.2.2
-BRMS=jboss-brms-6.3.0.GA-installer.jar
-EAP=jboss-eap-6.4.0-installer.jar
-EAP_PATCH=jboss-eap-6.4.7-patch.zip
+BRMS=jboss-brms-6.4.0.GA-deployable-eap7.x.zip
+EAP=jboss-eap-7.0.0-installer.jar
 
 # prints the documentation for this script.
 function print_docs() 
@@ -119,17 +118,7 @@ if [ -r $SRC_DIR/$EAP ] || [ -L $SRC_DIR/$EAP ]; then
 	echo Product EAP sources are present...
 	echo
 else
-	echo Need to download $EAP package from the Customer Portal 
-	echo and place it in the $SRC_DIR directory to proceed...
-	echo
-	exit
-fi
-
-if [ -r $SRC_DIR/$EAP_PATCH ] || [ -L $SRC_DIR/$EAP_PATCH ]; then
-	echo Product EAP patches are present...
-	echo
-else
-	echo Need to download $EAP_PATCH package from the Customer Portal 
+	echo Need to download $EAP package from http://developers.redhat.com
 	echo and place it in the $SRC_DIR directory to proceed...
 	echo
 	exit
@@ -139,7 +128,7 @@ if [ -r $SRC_DIR/$BRMS ] || [ -L $SRC_DIR/$BRMS ]; then
 	echo JBoss BPM Suite product sources are present...
 	echo
 else
-	echo Need to download $BRMS package from the Customer Portal 
+	echo Need to download $BRMS package from http://developers.redhat.com
 	echo and place it in the $SRC_DIR directory to proceed...
 	exit
 fi
