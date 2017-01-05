@@ -108,3 +108,5 @@ See the tagged releases for the following versions of the product:
 
 ![Decision Table](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/coolstore-decision-table.png?raw=true)
 
+![Cool Store](https://github.com/redhatdemocentral/rhcs-coolstore-demo/blob/master/docs/demo-images/rhcs-arch.png?raw=true)
+
