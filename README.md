@@ -46,7 +46,7 @@ Login to Cool Store to start exploring a retail web shopping project (the addres
 
 Note before running demo:
 -------------------------
-This project can be installed on any OpenShift platform, such as OpenShift Container Platform or Red Hat Container Development Kit.
+This project can be installed on any OpenShift platform, such as OpenShift Container Platform.
 It's possible to install it on any available installation by pointing this installer to an OpenShift IP address:
 ```
   $ ./init.sh IP
