@@ -6,4 +6,3 @@ RemoteSystemsTempFiles/
 *.zip
 repository/
 *.tar
-Dockerfile

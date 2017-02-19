@@ -68,17 +68,6 @@ if %argTotal% GTR 1 (
     GOTO :printDocs
 )
 
-REM determine the container build file to use.
-if %HOST_IP% EQU "10.1.2.2" (
-  echo Setting container build to target Red Hat CDK...
-	echo
-	xcopy /Y /Q "%SUPPORT_DIR%\Dockerfile-CDK" "%PROJECT_HOME%Dockerfile"
-) else (
-  echo Setting container build to target Red Hat OCP...
-	echo
-	xcopy /Y /Q "%SUPPORT_DIR%\Dockerfile-OCP" "%PROJECT_HOME%Dockerfile"
-) 
-
 REM make some checks first before proceeding.	
 call where oc >nul 2>&1
 if  %ERRORLEVEL% NEQ 0 (
@@ -123,7 +112,7 @@ if not "%ERRORLEVEL%" == "0" (
 echo.
 echo Creating a new project...
 echo.
-call oc new-project rhcs-coolstore-demo 
+call oc new-project app-dev-on-cloud-suite
 
 echo.
 echo Setting up a new build...
