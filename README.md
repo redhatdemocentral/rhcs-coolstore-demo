@@ -73,11 +73,11 @@ To clone a repository in the running container, the following actions would need
    ```
    # Read-only access to repo on port 9418.
    #
-   $ oc port-forward $(oc get pod -l=deploymentconfig=rhcs-bpms-install-demo --template='{{ range .items }} {{ .metadata.name }} {{ end }}') 9418:9418
+   $ oc port-forward $(oc get pod -l=deploymentconfig=rhcs-coolstore-demo --template='{{ range .items }} {{ .metadata.name }} {{ end }}') 9418:9418
 
    # Read-write access to repo on port 8001.
    #
-   $ oc port-forward $(oc get pod -l=deploymentconfig=rhcs-bpms-install-demo --template='{{ range .items }} {{ .metadata.name }} {{ end }}') 8001:8001
+   $ oc port-forward $(oc get pod -l=deploymentconfig=rhcs-coolstore-demo --template='{{ range .items }} {{ .metadata.name }} {{ end }}') 8001:8001
    ```
 
 2. Clone the repository. In another window, clone the remote repository:
