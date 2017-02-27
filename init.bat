@@ -168,7 +168,7 @@ if not "%ERRORLEVEL%" == "0" (
 echo.
 echo Creating an externally facing route by exposing a service...
 echo.
-call oc expose service rhcs-coolstore-demo --hostname=rhcs-coolstore-demo.%HOST_IP%.xip.io
+call oc expose service rhcs-coolstore-demo --port=8080 --hostname=rhcs-coolstore-demo.%HOST_IP%.xip.io
 
 if not "%ERRORLEVEL%" == "0" (
   echo.

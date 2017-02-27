@@ -61,7 +61,7 @@ RUN mvn install:install-file -Dfile=/opt/jboss/brms-projects/libs/coolstore-2.0.
 USER 1000
 
 # Expose Ports
-EXPOSE 9990 9999 8080
+EXPOSE 9990 9999 8080 9418 8001
 
 # Default Command
 CMD ["/bin/bash"]
