@@ -7,11 +7,15 @@ set AUTHORS=Andrew Block, Eric D. Schabell
 set PROJECT=git@github.com:redhatdemocentral/rhcs-coolstore-demo.git
 set SRC_DIR=%PROJECT_HOME%installs
 set SUPPORT_DIR=%PROJECT_HOME%support
-set OPENSHIFT_USER=openshift-dev
-set OPENSHIFT_PWD=devel
-set HOST_IP=10.1.2.2
 set BRMS=jboss-brms-6.4.0.GA-deployable-eap7.x.zip
 set EAP=jboss-eap-7.0.0-installer.jar
+
+REM Adjust these variables to point to an OCP instance.
+set OPENSHIFT_USER=openshift-dev
+set OPENSHIFT_PWD=devel
+set HOST_IP=192.168.99.100
+set OCP_PRJ=appdev-in-cloud
+set OCP_APP=rhcs-coolstore-demo
 
 REM wipe screen.
 cls
@@ -112,12 +116,15 @@ if not "%ERRORLEVEL%" == "0" (
 echo.
 echo Creating a new project...
 echo.
-call oc new-project app-dev-on-cloud-suite
+call oc new-project %OCP_PRJ%
 
 echo.
 echo Setting up a new build...
 echo.
-call oc new-build "jbossdemocentral/developer" --name=rhcs-coolstore-demo --binary=true
+call oc delete bc %OCP_APP% -n %OCP_PRJ% >nul 2>&1
+call oc delete imagestreams developer >nul 2>&1
+call oc delete imagestreams %OCP_APP% >nul 2>&1
+call oc new-build "jbossdemocentral/developer" --name=%OCP_APP% --binary=true
 
 if not "%ERRORLEVEL%" == "0" (
   echo.
@@ -144,7 +151,7 @@ if not "%ERRORLEVEL%" == "0" (
 echo.
 echo Starting a build, this takes some time to upload all of the product sources for build...
 echo.
-call oc start-build rhcs-coolstore-demo --from-dir=. --follow=true --wait=true
+call oc start-build %OCP_APP% --from-dir=. --follow=true --wait=true
 
 if not "%ERRORLEVEL%" == "0" (
   echo.
@@ -156,7 +163,7 @@ if not "%ERRORLEVEL%" == "0" (
 echo.
 echo Creating a new application...
 echo.
-call oc new-app rhcs-coolstore-demo
+call oc new-app %OCP_APP%
 
 if not "%ERRORLEVEL%" == "0" (
   echo.
@@ -168,7 +175,7 @@ if not "%ERRORLEVEL%" == "0" (
 echo.
 echo Creating an externally facing route by exposing a service...
 echo.
-call oc expose service rhcs-coolstore-demo --port=8080 --hostname=rhcs-coolstore-demo.%HOST_IP%.xip.io
+call oc expose service %OCP_APP% --port=8080 --hostname=%OCP_APP%.%HOST_IP%.xip.io
 
 if not "%ERRORLEVEL%" == "0" (
   echo.
@@ -182,14 +189,14 @@ echo ======================================================================
 echo =                                                                    =
 echo =  Login to JBoss BRMS to start developing rules projects:           =
 echo =                                                                    =
-echo =  http://rhcs-coolstore-demo.%HOST_IP%.xip.io/business-central       =
+echo =  http://%OCP_APP%.%HOST_IP%.xip.io/business-central       =
 echo =                                                                    =
 echo =  [ u:erics / p:jbossbrms1! ]                                       =
 echo =                                                                    =
 echo =                                                                    =
 echo =  Access the Cool Store web shopping cart at:                       =
 echo =                                                                    =
-echo =    http://rhcs-coolstore-demo.%HOST_IP%.xip.io/brms-coolstore-demo  =
+echo =    http://%OCP_APP%.%HOST_IP%.xip.io/brms-coolstore-demo  =
 echo =                                                                    =
 echo =  Note: it takes a few minutes to expose the service...             =
 echo =                                                                    =
