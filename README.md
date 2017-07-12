@@ -43,6 +43,8 @@ Login to Cool Store to start exploring a retail web shopping project (the addres
 
   - OCP example web app: [http://rhcs-coolstore-demo.192.168.99.100.xip.io/brms-coolstore-demo](http://rhcs-coolstore-demo.192.168.99.100.xip.io/brms-coolstore-demo)
 
+5. Want to build the Cool Store demo from scratch? Try these hands-on <a href="https://bpmworkshop.github.io/#/4" target="_blank">online workshops</a>.
+
 
 Note before running demo:
 -------------------------
@@ -101,6 +103,8 @@ Supporting Articles
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v1.6 - JBoss BRMS 6.4.0 and JBoss EAP 7.0.0 with Cool Store installed on any given OpenShift installation and loading mulitple projects.
 
 - v1.5 - JBoss BRMS 6.4.0 and JBoss EAP 7.0.0 with Cool Store installed on any given OpenShift installation and port forwarding for git repo access configured.
 
