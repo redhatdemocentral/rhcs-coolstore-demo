@@ -194,7 +194,7 @@ fi
 echo
 echo "Creating an externally facing route by exposing a service..."
 echo
-oc expose service "$OCP_APP" --port=8080 --hostname="$OCP_APP.$HOST_IP.xip.io"
+oc expose service "$OCP_APP" --port=8080
 
 if [ "$?" -ne "0" ]; then
 	echo
@@ -207,14 +207,14 @@ echo "======================================================================"
 echo "=                                                                    ="
 echo "=  Login to start exploring the Cool Store project:                  ="
 echo "=                                                                    ="
-echo "=    http://$OCP_APP.$HOST_IP.xip.io/business-central     ="
+echo "=    http://$OCP_APP-$OCP_PRJ.$HOST_IP.nip.io/business-central     ="
 echo "=                                                                    ="
 echo "=    [ u:erics / p:jbossbrms1! ]                                     ="
 echo "=                                                                    ="
 echo "=                                                                    ="
 echo "=  Access the Cool Store web shopping cart at:                       ="
 echo "=                                                                    ="
-echo "=    http://$OCP_APP.$HOST_IP.xip.io/brms-coolstore-demo  ="
+echo "=    http://$OCP_APP-$OCP_PRJ.$HOST_IP.xip.io/brms-coolstore-demo  ="
 echo "=                                                                    ="
 echo "=  Note: it takes a few minutes to expose the service...             ="
 echo "=                                                                    ="
