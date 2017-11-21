@@ -1,11 +1,7 @@
 App Dev Cloud with JBoss Cool Store Demo 
 ==========================================
 This demo is to install JBoss Cool Store in the Cloud based on leveraging any Red Hat OpenShift container
-based platform, such as 
-
- - [Red Hat Container Platform (OCP)](https://github.com/redhatdemocentral/ocp-install-demo)
-  
-It delivers a fully functioning containerized JBoss Cool Store.
+based platform. It delivers a fully functioning containerized JBoss Cool Store.
 
 The Cool Store is a retail web store demo where you will find rules, decision tables, events, and a ruleflow 
 that is leveraged by a web application. The web application is a WAR built using the JBoss BRMS
