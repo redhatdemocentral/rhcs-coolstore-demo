@@ -23,7 +23,8 @@ COPY support/installation-eap support/installation-eap.variables installs/$BRMS_
 
 # Update Permissions on Installers
 USER root
-RUN chown 1000:1000 /opt/jboss/$EAP_INSTALLER /opt/jboss/$BRMS_DEPLOYABLE
+RUN usermod -g root jboss && \
+    chown 1000:root /opt/jboss/$EAP_INSTALLER /opt/jboss/$BRMS_DEPLOYABLE
 
 # Prepare and run installer and cleanup installation components
 RUN sed -i "s:<installpath>.*</installpath>:<installpath>$BRMS_HOME</installpath>:" /opt/jboss/installation-eap \

@@ -23,6 +23,8 @@ Install JBoss Cool Store on OpenShift
 
   - [OCP Install Demo](https://github.com/redhatdemocentral/ocp-install-demo)
 
+  - [Red Hat Container Development Kit (CDK) using Minishift](https://developers.redhat.com/products/cdk/overview)
+
   - or your own OpenShift installation.
 
 2. [Download and unzip this demo.](https://github.com/redhatdemocentral/rhcs-coolstore-demo/archive/master.zip)
@@ -95,6 +97,8 @@ Supporting Articles
 Released versions
 -----------------
 See the tagged releases for the following versions of the product:
+
+- v1.8 - JBoss BRMS 6.4.0 and JBoss EAP 7.0.0 with Cool Store and available on CDK with Minishift.
 
 - v1.7 - JBoss BRMS 6.4.0 and JBoss EAP 7.0.0 with OpenShift genereated routes and service URLs.
 
