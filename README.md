@@ -1,3 +1,5 @@
+Update: Moved to [Gitlab](https://gitlab.com/redhatdemocentral/rhcs-coolstore-demo).
+
 App Dev Cloud with JBoss Cool Store Demo 
 ==========================================
 This demo is to install JBoss Cool Store in the Cloud based on leveraging any Red Hat OpenShift container
